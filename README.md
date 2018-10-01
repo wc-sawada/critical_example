@@ -1,0 +1,2 @@
+# critical_example
+クリティカルCSSをgulpで自動化させる
