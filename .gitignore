@@ -4,6 +4,9 @@ node_modules/*
 # 拡張子が log のファイルを除外
 *.log
 
+# 公開しているLPなので除外
+index.html
+
 ## css
 /css/*
 
