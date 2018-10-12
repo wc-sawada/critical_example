@@ -1,10 +1,13 @@
 # critical_example
 クリティカルCSSをgulpで自動化させる
 
+
+## 参考URL
 https://www.npmjs.com/package/critical
 
-http://blog.yuhiisk.com/archive/2015/06/22/about-critical-css.html#CSS-3
+https://www.npmjs.com/package/exact-critical
 
-https://github.com/addyosmani/critical-path-css-demo
+## npmでinstallしたプラグイン
+https://github.com/addyosmani/critical
 
-https://www.npmjs.com/package/gulp-critical-css
+https://github.com/bezoerb/inline-critical

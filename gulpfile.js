@@ -1,24 +1,28 @@
 //プラグイン
-/*
 var gulp = require('gulp'),
-	imagemin = require('gulp-imagemin'),
-	pngquant = require('imagemin-pngquant'),
-	changed  = require('gulp-changed'),
-	watch = require('gulp-watch');
+	critical = require('critical'),
+	inline = require('inline-critical');
 
-// 画像の圧縮
-gulp.task('image-min', function(){
-	gulp.src('./src/*') // src/imagesにある画像を読み込み
-	.pipe(changed('./dist/'))
-	.pipe(imagemin([pngquant({quality: '60-80', speed: 1})])) // pngの圧縮サイズを指定
-	.pipe(imagemin()) // おまじないでもう一回実行
-	.pipe(gulp.dest('./dist/')); // 吐き出し先を指定
-});
-
-// watch 監視
-gulp.task('watch', function () {
-	return watch(['./src/*'], () => {
-		return gulp.start(['image-min']);
+gulp.task('pc-critical', function () {
+	critical.generate({
+		inline: true,
+		base: './', // どこのディレクトリ配下なのか
+		src: 'index.html', // baseで指定したディレクトリ配下のどこのファイルを参照するのか
+		width: 1920, // 横幅
+		height: 1080, // 縦幅
+		minify: true,
+		dest: 'index-critical.html',
 	});
 });
-*/
+gulp.task('sp-critical', function () {
+	critical.generate({
+		inline: true,
+		base: './', // どこのディレクトリ配下なのか
+		src: 'sp_index.html', // baseで指定したディレクトリ配下のどこのファイルを参照するのか
+		width: 1125, // 横幅
+		height: 2436, // 縦幅
+		minify: true,
+		dest: 'sp_index-critical.html',
+	});
+});
+
