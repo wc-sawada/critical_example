@@ -5,8 +5,7 @@ node_modules/*
 *.log
 
 # 公開しているLPなので除外
-index.html
-sp_index.html
+*.html
 
 ## css
 /css/*
